@@ -12,7 +12,7 @@ int main(void)
 {
 	int n;
 	int mod;
-	char msg[] = "Last digit of ";
+	char msg[] = "Last digit of";
 	char gt[] = "and is greater than 5";
 	char lt[] = "and is less than 6 and not 0";
 	char zero[] = "and is 0";
