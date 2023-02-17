@@ -11,8 +11,10 @@ int main(void)
 	int i = 0;
 
 	while (i < 10)
-		putchar(i);
+	{
+		putchar(i % 10 + '0');
 		i = i + 1;
+	}
 	putchar('\n');
 
 	return (0);
