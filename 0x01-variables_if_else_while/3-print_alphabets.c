@@ -9,11 +9,18 @@
 int main(void)
 {
 	char c = 'a';
+	char C = 'A';
 
 	while (c <= 'z')
 	{
 		putchar(c);
 		c = c + 1;
+	}
+
+	while (C <= 'Z')
+	{
+		putchar(C);
+		C = C + 1;
 	}
 
 	putchar('\n');
