@@ -13,6 +13,11 @@ int main(void)
 	unsigned long next;
 	unsigned long l;
 
+	unsigned long n1;
+	unsigned long n2;
+	unsigned long n3;
+	unsigned long n4;
+
 	first = 1;
 	second = 2;
 
@@ -30,10 +35,11 @@ int main(void)
 		if (i < 95)
 			printf(", ");
 	}
-	unsigned long n1 = first/l;
-	unsigned long n2 = first % l;
-	unsigned long n3 = second/l;
-	unsigned long n4 = second % l;
+
+	n1 = first/l;
+	n2 = first % l;
+	n3 = second/l;
+	n4 = second % l;
 
 	for (i = 92; i < 99; i++)
 	{
