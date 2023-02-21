@@ -15,15 +15,15 @@ void times_table(void)
 			int n1 = (i * j) / 10;
 			int n2 = (i * j) % 10;
 
+			_putchar(' ');
 			if (n1 > 0)
 				_putchar(n1 + '0');
+			else 
+				_putchar(' ');
 			_putchar(n2 + '0');
 			if (j < 9)
 			{
 				_putchar(',');
-				_putchar(' ');
-				if ((i * j) < 10)
-					_putchar(' ');
 			}
 		}
 
