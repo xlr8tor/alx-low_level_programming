@@ -24,7 +24,7 @@ int main(void)
 	printf("%lu, ", first);
 	printf("%lu, ", second);
 
-	for (i = 1; i < 92; ++i)
+	for (i = 1; i < 91; ++i)
 	{
 		next = second;
 		second = second + first;
