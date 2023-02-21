@@ -11,7 +11,7 @@ int main(void)
 	unsigned long first;
 	unsigned long second;
 	unsigned long next;
-	unsigned long l;
+	unsigned long l = 1000000000;
 
 	unsigned long n1;
 	unsigned long n2;
