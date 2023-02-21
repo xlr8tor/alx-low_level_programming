@@ -11,11 +11,11 @@ void print_to_98(int n)
 	{
 		for (i = n; i < 99; i++)
 		{	
-			printf("%d",i);
+			__putchar(i);
 			if (i < 98)
 			{
-				putchar(',');
-				putchar(' ');
+				_putchar(',');
+				_putchar(' ');
 			}
 		}
 
@@ -24,14 +24,14 @@ void print_to_98(int n)
 	{
 		for (i = n; i >= 98; --i)
 		{
-		 printf("%d",i);
+		 	__putchar(i);
                         if (i > 98)
                         {
-                                putchar(',');
-                                putchar(' ');
+                                _putchar(',');
+                                _putchar(' ');
                         }
 		}
 	}
 
-	putchar('\n');
+	_putchar('\n');
 }
