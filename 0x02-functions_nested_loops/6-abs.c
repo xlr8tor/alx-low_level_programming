@@ -1,30 +1,4 @@
-#include <stdio.h>
-
-/**
- * main - Entry point
- *
- * Return: 0
- */
-
-/**
- * @c: integer number
- */
-int _abs(int c);
-
-int main(void)
-{
-	int r;
-
-	r = _abs(-1);
-	printf("%d\n", r);
-	r = _abs(0);
-	printf("%d\n", r);
-	r = _abs(1);
-	printf("%d\n", r);
-	r = _abs(-98);
-	printf("%d\n", r);
-	return (0);
-}
+#include "main.h"
 
 /**
  * _abs - computes the absolute value of an integer.
