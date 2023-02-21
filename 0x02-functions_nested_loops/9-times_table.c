@@ -15,8 +15,9 @@ void times_table(void)
 			int n1 = (i * j) / 10;
 			int n2 = (i * j) % 10;
 
-			_putchar(' ');
-			if (n1 > 0)
+			if (j > 0)
+				_putchar(' ');
+			if (n1 > 0 && j > 0)
 				_putchar(n1 + '0');
 			else 
 				_putchar(' ');
