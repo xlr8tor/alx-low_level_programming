@@ -10,7 +10,6 @@ int main(void)
 	int i;
 	unsigned long first;
 	unsigned long second;
-	unsigned long next;
 	unsigned long l = 1000000000;
 
 	unsigned long n1;
@@ -21,16 +20,13 @@ int main(void)
 	first = 1;
 	second = 2;
 
-	printf("%lu, ", first);
-	printf("%lu, ", second);
-
+	printf("%lu", first);
 	for (i = 1; i < 91; ++i)
 	{
-		next = second;
+		printf(", %lu", second);
 		second = second + first;
-		first = next;
+		first = second - first;
 
-		printf("%lu", second);
 
 		if (i < 95)
 			printf(", ");
