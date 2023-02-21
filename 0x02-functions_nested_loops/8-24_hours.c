@@ -1,13 +1,8 @@
-#include <stdio.h>
+#include "main.h"
 
-void jack_bauer(void);
-
-int main(void)
-{
-	jack_bauer();
-	return (0);
-}
-
+/**
+ * jack_bauer - prints every minute of the day
+ */
 void jack_bauer(void)
 {
 	int i;
@@ -22,12 +17,12 @@ void jack_bauer(void)
 			int n3 = j / 10;
 			int n4 = j % 10;
 
-			putchar(n1 + '0');
-			putchar(n2 + '0');
-			putchar(':');
-			putchar(n3 + '0');
-			putchar(n4 + '0');
-			putchar('\n');	
+			_putchar(n1 + '0');
+			_putchar(n2 + '0');
+			_putchar(':');
+			_putchar(n3 + '0');
+			_putchar(n4 + '0');
+			_putchar('\n');
 		}
 	}
 }
