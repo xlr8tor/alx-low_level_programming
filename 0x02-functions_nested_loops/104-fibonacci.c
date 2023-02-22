@@ -1,50 +1,46 @@
 #include <stdio.h>
+
 /**
- * main - rints the first 50 Fibonacci numbers
- *
- * Return: 0
+ * main - Prints the first 98 fibonacci numbers, starting with
+ * 1 and 2, separated by a comma followed by a space.
+ * Return: Always 0.
  */
+
 
 int main(void)
 {
-	int i;
-	unsigned long first;
-	unsigned long second;
-	unsigned long l = 1000000000;
+	int count;
+	unsigned long fib1 = 0, fib2 = 1, sum;
+	unsigned long fib1_half1, fib1_half2, fib2_half1, fib2_half2;
+	unsigned long half1, half2;
 
-	unsigned long n1;
-	unsigned long n2;
-	unsigned long n3;
-	unsigned long n4;
-
-	first = 1;
-	second = 2;
-
-	printf("%lu", first);
-	for (i = 1; i < 91; ++i)
+	for (count = 0; count < 92; count++)
 	{
-		printf(", %lu", second);
-		second = second + first;
-		first = second - first;
-
-
-		if (i < 95)
-			printf(", ");
+		sum = fib1 + fib2;
+		printf("%lu, ", sum);
+		fib1 = fib2;
+		fib2 = sum;
 	}
-
-	n1 = first/l;
-	n2 = first % l;
-	n3 = second/l;
-	n4 = second % l;
-
-	for (i = 92; i < 99; i++)
+	fib1_half1 = fib1 / 10000000000;
+	fib2_half1 = fib2 / 10000000000;
+	fib1_half2 = fib1 % 10000000000;
+	fib2_half2 = fib2 % 10000000000;
+	for (count = 93; count < 99; count++)
 	{
-		printf("%lu, ", n3 + (n4/l));
-		printf("%lu", n4 % l);
-		n3 = n3 + n1;
-		n1 = n3 - n1;
-		n4 = n4 + n2;
-		n2 = n4 - n2;
+		half1 = fib1_half1 + fib2_half1;
+		half2 = fib1_half2 + fib2_half2;
+		if (fib1_half2 + fib2_half2 > 9999999999)
+		{
+			half1 += 1;
+			half2 %= 10000000000;
+		}
+		printf("%lu%lu", half1, half2);
+		if (count != 98)
+			printf(", ");
+		fib1_half1 = fib2_half1;
+		fib1_half2 = fib2_half2;
+		fib2_half1 = half1;
+		fib2_half2 = half2;
 	}
 	printf("\n");
 	return (0);
