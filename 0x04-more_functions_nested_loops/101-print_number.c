@@ -6,38 +6,29 @@
 
 void print_number(int n)
 {
-	    int last_d = -1;
-    int pow = 1;
-    int d;
+	    unsigned int m, d, count;
 
     if (n < 0)
     {
-        _putchar('-');
-        last_d = '0' - (n % 10);
-        n /= 10;
-        n = -n;
-    }
-    else if (n > 9)
-    {
-        last_d = '0' + (n % 10);
-        n /= 10;
+        putchar('-');
+        m = n * -1;
     }
     else
     {
-        _putchar(n + '0');
+        m = n;
     }
 
-    while (pow * 10 <= n)
-        pow *= 10;
+    d = m;
+    count = 1;
 
-    while (pow != 0)
+    while (d > 9)
     {
-        d = n / pow;
-        if (n)
-            _putchar(d + '0');
-        n = n - (d * pow);
-        pow /= 10;
+        d /= 10;
+        count *= 10;
     }
-    if (last_d != -1)
-        _putchar(last_d);
+
+    for (; count >= 1; count /= 10)
+    {
+        putchar(((m / count) % 10) + '0');
+    }
 }
