@@ -10,6 +10,6 @@
 
 int _isupper(int c)
 {
-	c = c >= 'A' && c <= 'Z'? 1 : 0;
+	c = c >= 'A' && c <= 'Z' ? 1 : 0;
 	return (c);
 }
