@@ -38,6 +38,9 @@ int main(void)
 		}
 	}
 
+	if (num > 4)
+		max_prime = num;
+
 	printf("%ld\n", max_prime);
 	return (0);
 }
