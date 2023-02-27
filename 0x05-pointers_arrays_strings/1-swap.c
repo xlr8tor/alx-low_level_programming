@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * swap_int - Swap the values of 2 integers
  * @a: First int
