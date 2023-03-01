@@ -8,21 +8,23 @@
 
 char *rot13(char *s)
 {
-	int i, j, l = 13;
-	char *t = "ABCDEFGHIJKLM";
-	char *b = "NOPQRSTUVWXYZ";
+	int i, j, l = 52;
+	char *t;
+	char *b;
+
+	t = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	b = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		for (j = 0; j < l; j++)
 		{
-			if (s[i] == t[j] || s[i] - 32 == t[j])
-				s[i] = s[i] + 13;
-			else if (s[i] == b[j] || s[i] - 32 == b[j])
-				s[i] = s[i] - 13;
-			else
-				continue;
-		}	
+			if (s[i] == t[j])
+			{
+				s[i] = b[j];
+				break;
+			}
+		}
 	}
 	return (s);
 }
