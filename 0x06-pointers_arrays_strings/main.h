@@ -17,4 +17,6 @@ char *cap_string(char *);
 
 char *leet(char *);
 
+int _islower(char c);
+
 #endif /* _MAIN_H_ */

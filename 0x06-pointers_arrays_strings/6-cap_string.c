@@ -5,16 +5,6 @@
  *
  * Return: s
  */
-
-int _islower(char c);
-
-int _islower(char c)
-{
-	if (c >= 'a' && c <= 'z')
-		return (1);
-	return (0);
-}
-
 char *cap_string(char *s)
 {
 	int i;
@@ -39,6 +29,7 @@ char *cap_string(char *s)
 			case ')':
 			case '{':
 			case '}':
+			case '"':
 				if (_islower(s[i + 1]))
 					s[i + 1] = s[i + 1] - 'a' + 'A';
 				break;
@@ -48,4 +39,17 @@ char *cap_string(char *s)
 		}
 	}
 	return (s);
+}
+
+/**
+ * _islower - check if lowercase
+ * @c: character
+ *
+ * Return: 0 or 1
+ */
+int _islower(char c)
+{
+	if (c >= 'a' && c <= 'z')
+		return (1);
+	return (0);
 }
