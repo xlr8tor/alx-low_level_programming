@@ -13,7 +13,7 @@ void print_buffer(char *b, int size)
 	c = 0;
 	for (i = 0; i < size; i += 10)
 	{
-		printf("00000000%02x: ", i);
+		printf("000000%02x: ", i);
 		for (j = 0; j < 10; j++)
 		{
 			if (c >= size)
@@ -34,4 +34,5 @@ void print_buffer(char *b, int size)
 		if (i < size - 10)
 			printf("\n");
 	}
+	printf("\n");
 }
