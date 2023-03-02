@@ -31,7 +31,7 @@ void print_buffer(char *b, int size)
 			printf("%c", *(b + c) > 31 && *(b + c) < 127 ? *(b + c) : '.');
 			c++;
 		}
-		printf("\n");
-
+		if (i < size - 10)
+			printf("\n");
 	}
 }
