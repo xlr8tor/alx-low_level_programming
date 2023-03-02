@@ -29,9 +29,9 @@ void print_buffer(char *b, int size)
 		for (j = 0; j < 10 && c < size; j++)
 		{
 			printf("%c", *(b + c) > 31 && *(b + c) < 127 ? *(b + c) : '.');
-			c++;	
+			c++;
 		}
 		printf("\n");
 
-	}	
+	}
 }
