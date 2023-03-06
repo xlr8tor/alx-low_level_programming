@@ -21,4 +21,6 @@ char *_strpbrk(char *s, char *accept)
 	}
 match:
 	return (s + i);
+
+	return (NULL);
 }
