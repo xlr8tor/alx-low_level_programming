@@ -8,19 +8,16 @@
 
 int main(int argc, char *argv[])
 {
-	int i, sum = 0;
-
-	if (argc < 2)
-	{
-		printf("0\n");
-		return (0);
-	}
+	int i, n, sum = 0;
+	char *endptr;
 
 	for (i = 1; i < argc; i++)
 	{
-		if (isdigit(*argv[i]))
+		n = strtol(argv[i], &endptr, 10);
+
+		if (!(*endptr))
 		{
-			sum += atoi(argv[i]);
+			sum += n;
 		}
 		else
 		{
