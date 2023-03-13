@@ -22,6 +22,8 @@ char *_strdup(char *str)
 	else
 		cpy = malloc(sizeof(char) * len);
 
+	if (cpy == NULL)
+		return (NULL);
 	while (i < len)
 	{
 		cpy[i] = str[i];
