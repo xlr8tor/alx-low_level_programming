@@ -29,11 +29,11 @@ char *str_concat(char *s1, char *s2)
 	if (cat == 0)
 		return (NULL);
 
-	for (i = 0; *(s1 + i) != '\0'; i++)
-		*(cat + i) = *(s1 + i);
+	for (i = 0; s1[i] != '\0'; i++)
+		cat[i] = s1[i];
 
-	for (j = 0; *(s2 + j) != '\0'; j++)
-		*(cat + 1) = *(s2 + j), i++;
+	for (j = 0; s2[j] != '\0'; j++)
+		cat[i] = s2[j], i++;
 
 	return (cat);
 }
