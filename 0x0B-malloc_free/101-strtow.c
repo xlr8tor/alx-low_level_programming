@@ -27,7 +27,7 @@ int word_count(char *str)
 }
 
 /**
- * word_size: returns len of word
+ * word_size - returns len of word
  * @str: search string
  *
  * Return: len of word
@@ -63,7 +63,7 @@ char **strtow(char *str)
 	if (count == 0)
 		return (NULL);
 
-	arr = malloc(sizeof(char *) * count + 1);
+	arr = malloc(sizeof(char *) * (count + 1));
 	if (arr == NULL)
 		return (NULL);
 	for (i = 0; i < count; i++)
