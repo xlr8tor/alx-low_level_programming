@@ -8,12 +8,14 @@
 
 void *malloc_checked(unsigned int b)
 {
-	void *c;
+	int *c;
 
-	printf("print: %d", b);
 	c = malloc(b);
 
 	if (c == NULL)
+	{
 		exit(98);
+		return (NULL);
+	}
 	return (c);
 }
