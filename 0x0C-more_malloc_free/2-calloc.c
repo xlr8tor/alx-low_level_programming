@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * calloc - allocates memory for an array
+ * _calloc - allocates memory for an array
  * @nmemb: number of array elements
  * @size: number of bytes of memebers
  *
@@ -15,14 +15,13 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-	nsize = nmemb * size + 1;
+	nsize = nmemb * size;
 	c = malloc(nsize);
 
 	if (c == NULL)
 		return (NULL);
 	for (i = 0; i < nsize; i++)
 		*(c + i) = 0;
-	*(c + i) = '\0';
 
 	return (c);
 }
