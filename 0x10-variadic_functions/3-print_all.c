@@ -9,9 +9,8 @@ void print_all(const char * const format, ...)
 {
 	int i = 0;
 	va_list args;
-	char *msg;
+	char *msg = "(nil)";
 
-	
 	va_start(args, format);
 	while (format[i] != '\0')
 	{
@@ -30,6 +29,8 @@ void print_all(const char * const format, ...)
 				break;
 			case 's':
 				msg = va_arg(args, char *);
+				if (!msg)
+					msg = "(nil)";
 				printf("%s", msg);
 				break;
 			default:
