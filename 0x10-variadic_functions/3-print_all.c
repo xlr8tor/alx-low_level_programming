@@ -12,7 +12,7 @@ void print_all(const char * const format, ...)
 	char *msg = "(nil)";
 
 	va_start(args, format);
-	while (format[i] != '\0')
+	while (format && format[i])
 	{
 		int flag = 1;
 
