@@ -43,7 +43,7 @@ hash_node_t *create_item(const char *key, const char *value)
 */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int i,j;
+	unsigned long int i, j;
 	hash_node_t *ht_item;
 
 	if (!ht || !key || !value || *key == '\0')
