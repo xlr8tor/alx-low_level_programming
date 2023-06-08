@@ -43,32 +43,27 @@ hash_node_t *create_item(const char *key, const char *value)
 */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int i;
-	hash_node_t *ht_item, *curr_item;
+	unsigned long int i,j;
+	hash_node_t *ht_item;
 
 	if (!ht || !key || !value || *key == '\0')
 		return (0);
 
 	ht_item = create_item(key, value);
 	i = key_index((unsigned char *)key, ht->size);
-	curr_item = ht->array[i];
 
-	if (!ht_item)
-		return (0);
-	if (!curr_item)
+	for (j = i; ht->array[j]; j++)
 	{
-		ht_item->next = ht->array[i];
-		ht->array[i] = ht_item;
-		return (1);
-	}
-	else
-	{
-		if (strcmp(curr_item->key, key) == 0)
+		if (strcmp(ht->array[j]->key, key) == 0)
 		{
-			free(ht->array[i]->value);
-			ht->array[i]->value = strdup(value);
+			free(ht->array[j]->value);
+			ht->array[j]->value = strdup(value);
 			return (1);
 		}
 	}
-	return (0);
+	if (!ht_item)
+		return (0);
+	ht_item->next = ht->array[i];
+	ht->array[i] = ht_item;
+	return (1);
 }
